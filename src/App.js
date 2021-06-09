@@ -3,23 +3,25 @@ import FooterNavigation from "./components/mobile/footer/FooterNavigation";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MobileNavigationBar from "./components/mobile/nav/MobileNavigationBar";
 import HomeRoutes from "./components/mobile/HomeRoutes";
+import MobileRegisterComponent from "./components/mobile/login/MobileRegisterComponent";
 
 function App() {
   return (
     <div>
-      <div className="mobile__navbar">
-        <MobileNavigationBar home="Home"/>
-      </div>
+
       <div className="desktop__navbar">
         <NavigationBar />
       </div>
-      <HomeRoutes/>
-
-      {/* <Router>
+      <Router>
+      <div className="mobile__navbar">
+        <MobileNavigationBar/>
+      </div>
         <Switch>
-          <Route path="/" exact component={MobileHomePage} />
+          <Route path="/" exact component={HomeRoutes} />
+          <Route path="/register" exact component={MobileRegisterComponent} />
+
         </Switch>
-      </Router> */}
+      </Router>
 
       <div className="mobile__footer">
         <FooterNavigation />
