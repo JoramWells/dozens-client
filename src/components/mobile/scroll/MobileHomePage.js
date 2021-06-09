@@ -6,6 +6,9 @@ export default function MobileHomePage({product}) {
   const {id,src,alt,productName,price,discount,likes} = product
   return (
     <div className="mobile__body" data-testid={`product-${id}`}>
+      <Helmet>
+        <title>HomePage</title>
+      </Helmet>
 
       <div className="p-4">
         <div className="flex flex-col content-center items-center space-y-8">
