@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 
 function MobileNavigationBar() {
-    return (
-        <nav className="flex flex-row">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-
-            
-        </nav>
-    )
+  return (
+    <nav className="flex flex-row p-2 justify-between shadow-sm">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </nav>
+  );
 }
 
-export default MobileNavigationBar
+export default MobileNavigationBar;

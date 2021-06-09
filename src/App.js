@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import NavigationBar from "./components/desktop/NavigationBar";
+import FooterNavigation from "./components/mobile/FooterNavigation";
 import MobileNavigationBar from "./components/mobile/MobileNavigationBar";
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
       </div>
       <div className="desktop__navbar">
       <NavigationBar />
+      </div>
+      <div className="mobile__footer">
+      <FooterNavigation />
+
       </div>
     </div>
   );

@@ -22,6 +22,9 @@ code {
 .mobile__navbar {
   display: none !important;
 }
+.mobile__footer {
+  display: none !important;
+}
 
 
 @media (max-width: 767px) {
@@ -38,5 +41,10 @@ code {
   .mobile__navbar {
     display: block !important;
   }
+  .mobile__footer {
+    display: block !important;
+  
+  }
 }
+
 
