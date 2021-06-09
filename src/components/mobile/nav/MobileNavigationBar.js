@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
 
-function MobileNavigationBar(props) {
+function MobileNavigationBar() {
   const [visible, setVisible] = useState("hidden");
   const [diVisible, setDiVisible] = useState("visible");
 
