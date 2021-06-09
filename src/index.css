@@ -15,7 +15,7 @@ code {
     monospace;
 }
 
-.mobile__carousel {
+.mobile__body {
   display: none !important;
 }
 
@@ -35,7 +35,7 @@ code {
   .desktop__navbar {
     display: none !important;
   }
-  .mobile__carousel {
+  .mobile__body {
     display: block !important;
   }
   .mobile__navbar {
