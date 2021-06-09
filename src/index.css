@@ -14,3 +14,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.mobile__carousel {
+  display: none !important;
+}
+
+.mobile__navbar {
+  display: none !important;
+}
+
+
+@media (max-width: 767px) {
+
+  .desktop__carousel {
+    display: none;
+  }
+  .desktop__navbar {
+    display: none !important;
+  }
+  .mobile__carousel {
+    display: block !important;
+  }
+  .mobile__navbar {
+    display: block !important;
+  }
+}
+
