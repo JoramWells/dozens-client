@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { ArrowNarrowLeftIcon, HomeIcon, SearchIcon, UserIcon, XIcon } from "@heroicons/react/solid";
 
-function MobileNavigationBar() {
+function MobileNavigationBar(props) {
   const [visible, setVisible] = useState("hidden");
   const [diVisible, setDiVisible] = useState("visible");
 
@@ -39,8 +39,10 @@ function MobileNavigationBar() {
       <nav
         className="flex flex-row p-3 justify-between shadow-md bg-yellow-400"
         style={{ visibility: diVisible, transition:"350ms" }}
+        data-testid="mobile_nav"
       >
-          <div>
+          <div className="flex flex-row space-x-2">
+            {props.home}
               <HomeIcon className="h-5 text-gray-700" />
           </div>
         <div>
