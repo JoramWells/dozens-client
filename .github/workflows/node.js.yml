@@ -26,6 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn cache clean --force
-    - run: yarn  --silent --ignore-optional
+    - run: yarn  --silent --ignore-optional --ignore-engines
     - run: yarn run build --if-present
     - run: yarn test
