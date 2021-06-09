@@ -16,6 +16,7 @@ export default function MobileHomePage() {
               src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80"
               style={{ width: "25rem", height: "200px" }}
               className="rounded-t-md"
+              alt="shoe1"
             />
             <div className="p-2">
               <blockquote>product name</blockquote>
@@ -37,6 +38,7 @@ export default function MobileHomePage() {
               src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
               style={{ width: "25rem", height: "200px" }}
               className="rounded-t-md"
+              alt="shoe2"
             />
             <div className="p-2">
               <blockquote>product name</blockquote>
@@ -53,11 +55,12 @@ export default function MobileHomePage() {
               </figcaption>
             </div>
           </figure>
-          <figure className="shadow-lg">
+          <figure className="border-1">
             <img
               src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
               style={{ width: "25rem", height: "200px" }}
               className="rounded-t-md"
+              alt="shoe3"
             />
             <div className="p-2">
               <blockquote>product name</blockquote>
