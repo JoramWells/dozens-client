@@ -1,8 +1,8 @@
 import NavigationBar from "./components/desktop/NavigationBar";
-import FooterNavigation from "./components/mobile/FooterNavigation";
+import FooterNavigation from "./components/mobile/footer/FooterNavigation";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MobileHomePage from "./components/mobile/MobileHomePage";
 import MobileNavigationBar from "./components/mobile/nav/MobileNavigationBar";
+import HomeRoutes from "./components/mobile/HomeRoutes";
 
 function App() {
   return (
@@ -13,11 +13,13 @@ function App() {
       <div className="desktop__navbar">
         <NavigationBar />
       </div>
-      <Router>
+      <HomeRoutes/>
+
+      {/* <Router>
         <Switch>
           <Route path="/" exact component={MobileHomePage} />
         </Switch>
-      </Router>
+      </Router> */}
 
       <div className="mobile__footer">
         <FooterNavigation />
