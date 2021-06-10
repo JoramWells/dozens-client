@@ -14,7 +14,7 @@ export default function MobileHomePage({product}) {
         <div className="flex flex-col content-center items-center space-y-8">
           <figure style={{ width: "18rem", border: "1px solid whitesmoke" }}>
             <img
-              src={src}
+              src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
               style={{ width: "18rem", height: "170px" }}
               alt={alt}
             />
