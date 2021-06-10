@@ -3,10 +3,10 @@ import {
   ArrowNarrowLeftIcon,
   HomeIcon,
   SearchIcon,
-  UserIcon,
   XIcon,
 } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
+import NavDropdown from "../NavDropdown";
 
 function MobileNavigationBar() {
   const [visible, setVisible] = useState("hidden");
@@ -55,9 +55,7 @@ function MobileNavigationBar() {
         <div className="flex flex-row space-x-4">
         <SearchIcon className="h-5 text-gray-700" onClick={showNav} />
 
-          <Link to="/register">
-            <UserIcon className="h-5 text-gray-700" />
-          </Link>
+            <NavDropdown />
         </div>
       </nav>
     </>
