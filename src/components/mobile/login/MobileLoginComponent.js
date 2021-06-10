@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function MobileLoginComponent() {
     return (
-        <div className="bg-gray-50 h-screen "
+        <div className="bg-gray-50 h-screen mobile__login"
         data-testid="register_div"
     
          >

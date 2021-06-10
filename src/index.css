@@ -18,6 +18,12 @@
     display: none !important;
 
   }
+  .mobile__register{
+    display: none !important;
+  }
+  .mobile__login{
+    display: none !important;
+  }
 @media (max-width: 767px) {
  
     .desktop__carousel {
@@ -38,5 +44,12 @@
     .mobile__footer{
         display: block !important;
     
+      }
+      .mobile__register{
+        display: block !important;
+      }
+      .mobile__login{
+        display: block !important;
+        transition: 350ms;
       }
   }

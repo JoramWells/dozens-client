@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export default function MobileRegisterComponent() {
   return (
-    <div className="bg-gray-50"
+    <div className="bg-gray-50 mobile__register"
     data-testid="register_div"
 
      >
