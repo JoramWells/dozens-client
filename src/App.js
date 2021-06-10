@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MobileNavigationBar from "./components/mobile/nav/MobileNavigationBar";
 import HomeRoutes from "./components/mobile/HomeRoutes";
 import MobileRegisterComponent from "./components/mobile/login/MobileRegisterComponent";
+import MobileLoginComponent from "./components/mobile/login/MobileLoginComponent";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       </div>
         <Switch>
           <Route path="/" exact component={HomeRoutes} />
+          <Route path="/login" exact component={MobileLoginComponent} />
           <Route path="/register" exact component={MobileRegisterComponent} />
 
         </Switch>
