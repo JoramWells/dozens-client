@@ -3,7 +3,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 export default function MobileHomePage({product}) {
-  const {id,src,alt,productName,price,discount,likes} = product
+  const {id,alt,productName,price,discount,likes} = product
   return (
     <div className="mobile__body" data-testid={`product-${id}`}>
       <Helmet>
