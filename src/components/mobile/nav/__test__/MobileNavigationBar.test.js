@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import MobileNavigationBar from "../MobileNavigationBar";
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import renderer from "react-test-renderer";
+// import renderer from "react-test-renderer";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 afterEach(cleanup);

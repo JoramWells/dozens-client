@@ -11,7 +11,10 @@ import { Link } from "react-router-dom";
 
 export default function MobileRegisterComponent() {
   return (
-    <div className="bg-gray-50 p-2">
+    <div className="bg-gray-50 p-2"
+    data-testid="mobile_nav"
+
+     >
       <Helmet>
         <title>Register | Dozens Kenya</title>
       </Helmet>
