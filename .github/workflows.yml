@@ -11,5 +11,5 @@ jobs:
       - uses: actions/setup-node@v16
         with:
           node-version: 14
-      - run: yarn add --no-optional
+      - run: yarn add --silent --ignore-optional
       - run: yarn run build
