@@ -7,7 +7,7 @@ export default function MobileHomePage({product}) {
   return (
     <div className="mobile__body" data-testid={`product-${id}`}>
       <Helmet>
-        <title>HomePage</title>
+        <title>HomePage | Dozens Kenya</title>
       </Helmet>
 
       <div className="p-4">

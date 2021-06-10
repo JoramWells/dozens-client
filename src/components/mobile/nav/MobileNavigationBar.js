@@ -43,7 +43,7 @@ function MobileNavigationBar() {
 
       {/* Home nav */}
       <nav
-        className="flex flex-row p-4 justify-between shadow-md bg-white"
+        className="flex flex-row p-3 justify-between shadow-md bg-white"
         style={{ visibility: diVisible, transition: "350ms" }}
         data-testid="mobile_nav"
       >
@@ -52,10 +52,10 @@ function MobileNavigationBar() {
             <HomeIcon className="h-5 text-gray-600" />
           </Link>
         </div>
-        <div className="flex flex-row space-x-4">
-        <SearchIcon className="h-5 text-gray-700" onClick={showNav} />
+        <div className="flex flex-row space-x-4 items-center">
+          <SearchIcon className="h-5 text-gray-700" onClick={showNav} />
 
-            <NavDropdown />
+          <NavDropdown />
         </div>
       </nav>
     </>

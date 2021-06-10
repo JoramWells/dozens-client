@@ -9,10 +9,10 @@ import {
 
 export default function NavDropdown() {
   return (
-    <div className="w-56 text-right">
-      <Menu as="div" className="relative inline-block text-left">
+    <div className="text-right">
+      <Menu as="div" className="relative inline-block text-left"  >
         <div>
-          <Menu.Button className="p-2 m-0 text-sm font-medium bg:rounded-full text-white bg-black rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="p-1 text-sm font-medium focus:bg-none bg:rounded-full text-white bg-black rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             <UserIcon className="h-5" />
           </Menu.Button>
         </div>
