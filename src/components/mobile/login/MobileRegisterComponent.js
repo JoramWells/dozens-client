@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 export default function MobileRegisterComponent() {
   return (
     <div className="bg-gray-50 p-2"
-    data-testid="mobile_nav"
+    data-testid="register_div"
 
      >
       <Helmet>
@@ -22,14 +22,16 @@ export default function MobileRegisterComponent() {
         <p className="font-semibold text-gray-700 text-2xl">Create  account</p>
       </div> */}
       <div className="flex flex-col p-4 items-center justify-center content-center shadow-xl bg-white rounded-md">
-        <div className="bg-white w-full my-4 flex flex-row  focus-within:ring-1 rounded-md">
+        <div className="bg-white w-full my-4 flex flex-row  focus-within:ring-1 rounded-md shadow-md"
+            style={{borderBottom:"1px solid whitesmoke"}}
+        >
           <UserIcon className="h-5 m-1 text-gray-500" />
           <input
             placeholder="Enter username"
             className="w-full focus:outline-none text-gray-700 rounded-md p-1"
           />
         </div>
-        <div className="bg-white w-full my-4 flex flex-row  focus-within:ring-1 rounded-md">
+        <div className="bg-white w-full my-4 flex flex-row  focus-within:ring-1 rounded-md" style={{borderBottom:"1px solid whitesmoke"}}>
           <MailIcon className="h-5 m-1 text-gray-500" />
           <input
             placeholder="Enter email"
