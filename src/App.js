@@ -1,5 +1,4 @@
 import NavigationBar from "./components/desktop/NavigationBar";
-import FooterNavigation from "./components/mobile/footer/FooterNavigation";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MobileNavigationBar from "./components/mobile/nav/MobileNavigationBar";
 import HomeRoutes from "./components/mobile/HomeRoutes";
@@ -26,7 +25,6 @@ function App() {
       </Router>
 
       <div className="mobile__footer">
-        <FooterNavigation />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MobileHomePage from "./scroll/MobileHomePage";
+import FooterNavigation from "./footer/FooterNavigation";
 
 export default function HomeRoutes() {
   const [data, setData] = useState([]);
@@ -90,7 +91,11 @@ export default function HomeRoutes() {
   return (
     <>
       {data.map((product) => (
+        <div>
         <MobileHomePage key={product.id} product={product} />
+        <FooterNavigation/>
+        </div>
+
       ))}
     </>
   );

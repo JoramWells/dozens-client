@@ -21,7 +21,10 @@ export default function MobileRegisterComponent() {
       {/* <div className="flex flex-col items-center justify-center m-4">
         <p className="font-semibold text-gray-700 text-2xl">Create  account</p>
       </div> */}
-      <div className="flex flex-col p-4 items-center justify-center content-center shadow-xl bg-white rounded-md">
+      <div className="flex flex-col p-4 items-center justify-center content-center bg-white rounded-md"
+        style={{border:"solid black 1px"}}
+
+      >
         <div className="bg-white w-full my-4 flex flex-row p-1  ring-1 ring-gray-300 rounded-md"
         >
           <UserIcon className="h-5 m-1 text-gray-500" />
@@ -37,24 +40,25 @@ export default function MobileRegisterComponent() {
             className="w-full focus:outline-none text-gray-700 rounded-md p-1"
           />
         </div>
-        <div className="bg-white w-full my-4 flex flex-row  focus-within:ring-1 rounded-md">
+        <div className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-300 p-1 rounded-md">
           <PhoneIcon className="h-5 m-1 text-gray-500" />
           <input
             placeholder="+245 799 989 846"
             className="w-full focus:outline-none text-gray-700 rounded-md p-1"
           />
         </div>
-        <div className="bg-white w-full my-4 flex flex-row  focus-within:ring-1 rounded-md">
+        <div className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-300 p-1 rounded-md">
           <LocationMarkerIcon className="h-5 m-1 text-gray-500" />
           <input
             placeholder="Umoja, Nairobi"
             className="w-full focus:outline-none text-gray-700 rounded-md p-1"
           />
         </div>
-        <div className="bg-white w-full my-4 flex flex-row  focus-within:ring-1 rounded-md">
+        <div className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-300 p-1 rounded-md">
           <LockClosedIcon className="h-5 m-1 text-gray-500" />
           <input
             type="password"
+            placeholder="Password"
             className="w-full focus:outline-none text-gray-700 rounded-md p-1"
           />
         </div>
