@@ -1,4 +1,5 @@
 import {
+    ArrowNarrowLeftIcon,
   LocationMarkerIcon,
   LockClosedIcon,
   MailIcon,
@@ -11,18 +12,23 @@ import { Link } from "react-router-dom";
 
 export default function MobileRegisterComponent() {
   return (
-    <div className="bg-gray-50 p-2"
+    <div className="bg-gray-50"
     data-testid="register_div"
 
      >
       <Helmet>
         <title>Register | Dozens Kenya</title>
       </Helmet>
-      {/* <div className="flex flex-col items-center justify-center m-4">
-        <p className="font-semibold text-gray-700 text-2xl">Create  account</p>
-      </div> */}
+      
+      <nav className="flex flex-row items-center justify-center space-x-8 mb-2 top-0 bg-white p-2 shadow-xl">
+          <div>
+              <ArrowNarrowLeftIcon className="h-5" />
+          </div>
+        <p className=" text-gray-700 text-xl">Create  account</p>
+      </nav>
+      <div className="p-2">
       <div className="flex flex-col p-4 items-center justify-center content-center bg-white rounded-md"
-        style={{border:"solid black 1px"}}
+        style={{border:"solid gray 1px"}}
 
       >
         <div className="bg-white w-full my-4 flex flex-row p-1  ring-1 ring-gray-300 rounded-md"
@@ -71,6 +77,8 @@ export default function MobileRegisterComponent() {
           SignIn
         </button>
       </div>
+      </div>
+
     </div>
   );
 }
