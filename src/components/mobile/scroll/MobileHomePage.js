@@ -1,14 +1,30 @@
+import { Dialog, Transition } from "@headlessui/react";
 import { DotsVerticalIcon, ThumbUpIcon } from "@heroicons/react/solid";
-import React from "react";
+import React, { useState,Fragment } from "react";
 import { Helmet } from "react-helmet";
+
 
 export default function MobileHomePage({product}) {
   const {id,alt,productName,price,discount,likes} = product
+  let [isOpen, setIsOpen] = useState(true)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
   return (
+    <>
+    
+
     <div className="mobile__body" data-testid={`product-${id}`}>
       <Helmet>
         <title>HomePage | Dozens Kenya</title>
       </Helmet>
+
 
       <div className="p-4 " style={{backgroundColor:"whitesmoke"}}>
         <div className="flex flex-col content-center items-center space-y-8">
@@ -54,6 +70,9 @@ export default function MobileHomePage({product}) {
           </figure>
         </div>
       </div>
+      
     </div>
+    
+    </>
   );
 }
