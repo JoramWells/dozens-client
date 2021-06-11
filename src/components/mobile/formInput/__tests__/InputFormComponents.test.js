@@ -69,4 +69,5 @@ test("inputformcomponent matches snapshot", () => {
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
+//   tree.props._onChange();
 });
