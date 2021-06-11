@@ -36,7 +36,7 @@ const ModalComponent = ({ isOpen, close, children }) => {
     window.addEventListener("click", listener);
 
     return () => window.removeEventListener("click", listener);
-  }, [isOpen]);
+  }, [isOpen,close]);
   if (!isOpen) return null;
   return ReactDOM.createPortal(
     <Background>
