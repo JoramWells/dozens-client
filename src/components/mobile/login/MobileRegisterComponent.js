@@ -1,5 +1,4 @@
 import {
-  ArrowNarrowLeftIcon,
   LocationMarkerIcon,
   LockClosedIcon,
   MailIcon,
@@ -18,6 +17,8 @@ export default class MobileRegisterComponent extends Component {
     username: "",
     email: "",
     phone: "",
+    location:"",
+    password:""
   };
   handleChange = (key) => (value) => {
     this.setState({ [key]: value });
@@ -26,7 +27,7 @@ export default class MobileRegisterComponent extends Component {
   //   console.log(this.state.email);
   // };
   render() {
-    const { email, username, phone } = this.state;
+    const { email, username, phone,location,password } = this.state;
     return (
       <div className="bg-gray-50 mobile__register" data-testid="register_div">
         <Helmet>
@@ -47,18 +48,20 @@ export default class MobileRegisterComponent extends Component {
             <InputFormComponent
               type="text"
               placeholder="User name"
-              Icon={MailIcon}
+              value={username}
+              Icon={UserIcon}
               validators={[
                 {
                   check: Validators.required,
                   message: "Enter your name",
                 },
               ]}
-              onChange={this.handleChange}
+              onChange={this.handleChange("username")}
             />
             <InputFormComponent
               type="email"
               placeholder="Enter email"
+              value={email}
               Icon={MailIcon}
               validators={[
                 {
@@ -66,11 +69,12 @@ export default class MobileRegisterComponent extends Component {
                   message: "Enter valid email",
                 },
               ]}
-              onChange={this.handleChange}
+              onChange={this.handleChange("email")}
             />
             <InputFormComponent
               type="text"
               placeholder="Enter your phone number"
+              value={phone}
               Icon={PhoneIcon}
               validators={[
                 {
@@ -78,11 +82,12 @@ export default class MobileRegisterComponent extends Component {
                   message: "Phone number is required",
                 },
               ]}
-              onChange={this.handleChange}
+              onChange={this.handleChange("phone")}
             />
             <InputFormComponent
               type="text"
               placeholder="Enter your location"
+              value={location}
               Icon={LocationMarkerIcon}
               validators={[
                 {
@@ -90,16 +95,18 @@ export default class MobileRegisterComponent extends Component {
                   message: "Location is required",
                 },
               ]}
-              onChange={this.handleChange}
+            
+              onChange={this.handleChange("location")}
             />
             <InputFormComponent
               type="password"
               placeholder="Enter password"
+              value={password}
               Icon={LockClosedIcon}
               validators={[
                 { check: Validators.required, message: "Password is required" },
               ]}
-              onChange={this.handleChange}
+              onChange={this.handleChange("password")}
             />
 
             <div>
