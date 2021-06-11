@@ -14,12 +14,14 @@ const InputFormComponent = ({ placeholder, Icon, type, value, onChange }) => {
     onChange(value)
   };
   return (
-    <div className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-200 p-1 rounded-md">
+    <div className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-200 p-1 rounded-md"     data-testid="input_form"
+    >
       {Icon && <Icon className="h-5 m-1 text-gray-500" />}
 
       <input
         type={type}
         placeholder={placeholder}
+        value={value}
         className="w-full focus:outline-none text-gray-700 rounded-md p-1"
         onChange={handleChange}
       />
