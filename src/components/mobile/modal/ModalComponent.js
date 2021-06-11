@@ -26,17 +26,17 @@ const Content = styled.div`
 const ModalHeader = styled.div``;
 
 const ModalComponent = ({ isOpen, close, children }) => {
-    const contentRef = useRef()
-    useEffect(() => {
-        if(!isOpen) return
-        function listener(e){
-            if(contentRef.current.contains(e.target))return
-            close()
-        }
-        window.addEventListener('click',listener)
-        
-        return () => window.removeEventListener('click',listener)
-    }, [isOpen])
+  const contentRef = useRef();
+  useEffect(() => {
+    if (!isOpen) return;
+    function listener(e) {
+      if (contentRef.current.contains(e.target)) return;
+      close();
+    }
+    window.addEventListener("click", listener);
+
+    return () => window.removeEventListener("click", listener);
+  }, [isOpen]);
   if (!isOpen) return null;
   return ReactDOM.createPortal(
     <Background>
