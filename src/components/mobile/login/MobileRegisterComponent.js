@@ -22,9 +22,9 @@ export default class MobileRegisterComponent extends Component {
   handleChange = (key) => (value) => {
     this.setState({ [key]: value });
   };
-  showValues = () => {
-    console.log(this.state.email);
-  };
+  // showValues = () => {
+  //   console.log(this.state.email);
+  // };
   render() {
     const { email, username, phone } = this.state;
     return (
