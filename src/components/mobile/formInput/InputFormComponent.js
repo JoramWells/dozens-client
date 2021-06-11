@@ -19,7 +19,8 @@ const InputFormComponent = ({
   return (
     <div data-testid="input_form">
       <div
-        className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-200 p-1 rounded-md" 
+      style={{width:"18rem"}}
+        className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-100 p-1  rounded-md " 
       >
         {Icon && <Icon className="h-5 m-1 text-gray-500" />}
 
@@ -31,8 +32,8 @@ const InputFormComponent = ({
           onChange={handleChange}
         />
       </div>
-      <div className="h-8">
-        {error && <p className="text-sm text-gray-500">{error.message}</p>}
+      <div className="h-2 flex justify-start">
+        {error && <p className="text-xs text-red-400 -mt-1">{error.message}</p>}
       </div>
     </div>
   );

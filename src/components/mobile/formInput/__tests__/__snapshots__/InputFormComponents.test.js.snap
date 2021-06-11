@@ -5,7 +5,12 @@ exports[`inputformcomponent matches snapshot 1`] = `
   data-testid="input_form"
 >
   <div
-    className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-200 p-1 rounded-md"
+    className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-100 p-1  rounded-md "
+    style={
+      Object {
+        "width": "18rem",
+      }
+    }
   >
     <svg
       className="h-5 m-1 text-gray-500"
@@ -29,7 +34,7 @@ exports[`inputformcomponent matches snapshot 1`] = `
     />
   </div>
   <div
-    className="h-8"
+    className="h-2 flex justify-start"
   />
 </div>
 `;
