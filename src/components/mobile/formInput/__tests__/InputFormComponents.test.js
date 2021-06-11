@@ -3,6 +3,7 @@ import InputFormComponent from "../InputFormComponent";
 import { render, cleanup, screen } from "@testing-library/react";
 import { MailIcon } from "@heroicons/react/solid";
 import renderer from "react-test-renderer";
+import { Validators } from "../../../utilities/Validator";
 
 afterEach(() => {
   cleanup();
@@ -40,6 +41,9 @@ test("inputformcomponetn should handle props correctly", () => {
       type={props.type}
       value={props.value}
       onChange={props.onChange}
+      validators={[
+        {check:Validators.email, message:"Invalid email"}
+      ]}
     />
   );
   const formElement = screen.getByTestId("input_form");
@@ -65,6 +69,9 @@ test("inputformcomponent matches snapshot", () => {
         type={props.type}
         value={props.value}
         onChange={props.onChange}
+        validators={[
+          {check:Validators.email, message:"Invalid email"}
+        ]}
       />
     )
     .toJSON();

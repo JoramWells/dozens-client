@@ -6,6 +6,7 @@ import {
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { Validators } from "../../utilities/Validator";
 import InputFormComponent from "../formInput/InputFormComponent";
 
 export default class MobileLoginComponent extends Component {
@@ -38,22 +39,28 @@ export default class MobileLoginComponent extends Component {
           </div>
           <p className=" text-gray-700 text-xl">Create account</p>
         </nav>
-        <div className="p-4">
+        <div className="p-3">
           <div
-            className="flex flex-col p-4 items-center justify-center content-center bg-white rounded-md "
+            className="flex flex-col p-2 items-center justify-center content-center bg-white rounded-md "
             style={{ border: "solid #E0E0E0 1px" }}
           >
             <InputFormComponent
-              type="text"
+              type="email"
               placeholder="jorammanoah1@gmail.com"
               Icon={MailIcon}
               value={email}
+              validators={[
+                {check:Validators.email, message:"Invalid email"}
+              ]}
               onChange={this.handleChange("email")}
             />
             <InputFormComponent
               type="password"
               placeholder="******************"
               Icon={LockClosedIcon}
+              validators={[
+                {check:Validators.required,message:"Pasword is required"}
+              ]}
               onChange={this.handleChange("password")}
               value={password}
             />
