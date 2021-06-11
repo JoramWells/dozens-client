@@ -22,7 +22,7 @@ export default function MobileHomePage({ product }) {
             >
               <div
                 className="absolute bg-black text-gray-200 p-1 rounded-full m-1 bg-opacity-20"
-                style={{ right: "20px" }}
+                style={{ right: "30px" }}
               >
                 <DotsVerticalIcon
                   className="h-5"
@@ -36,6 +36,9 @@ export default function MobileHomePage({ product }) {
               />
               <div className="p-2">
                 <blockquote>{productName}</blockquote>
+                <ModalComponent isOpen={isOpen} close={() => setOpen(false)}>
+                  <p>{productName}</p>
+                </ModalComponent>
                 <p className="text-gray-600">Airforce Maziwa</p>
                 <figcaption>
                   <div>
@@ -59,9 +62,6 @@ export default function MobileHomePage({ product }) {
           </div>
         </div>
       </div>
-      <ModalComponent isOpen={isOpen} close={() => setOpen(false)}>
-        <p>item details</p>
-      </ModalComponent>
     </>
   );
 }
