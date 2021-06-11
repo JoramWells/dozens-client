@@ -1,20 +1,19 @@
-import { Dialog, Transition } from "@headlessui/react";
 import { DotsVerticalIcon, ThumbUpIcon } from "@heroicons/react/solid";
-import React, { useState,Fragment } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
 
 export default function MobileHomePage({product}) {
   const {id,alt,productName,price,discount,likes} = product
-  let [isOpen, setIsOpen] = useState(true)
+  // let [isOpen, setIsOpen] = useState(true)
 
-  function closeModal() {
-    setIsOpen(false)
-  }
+  // function closeModal() {
+  //   setIsOpen(false)
+  // }
 
-  function openModal() {
-    setIsOpen(true)
-  }
+  // function openModal() {
+  //   setIsOpen(true)
+  // }
 
   return (
     <>
