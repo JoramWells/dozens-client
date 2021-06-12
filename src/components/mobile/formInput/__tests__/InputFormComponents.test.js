@@ -8,7 +8,7 @@ import { Validators } from "../../../utilities/Validator";
 afterEach(() => {
   cleanup();
 });
-test("input form component renders without crashing", () => {
+test("inputform component renders without crashing", () => {
   const form = document.createElement("form");
   ReactDOM.render(<InputFormComponent />, form);
 });

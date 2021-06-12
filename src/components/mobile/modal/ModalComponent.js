@@ -45,8 +45,8 @@ const ModalComponent = ({ isOpen, close, children }) => {
   }, [isOpen,close]);
   if (!isOpen) return null;
   return ReactDOM.createPortal(
-    <Background>
-      <Content className="shadow-lg" ref={contentRef}>
+    <Background data-testid="modal_div">
+      <Content  className="shadow-lg" ref={contentRef}>
         <ModalHeader className="flex flex-row justify-end" >
           <XIcon className="h-5 text-gray-700" onClick={()=>close()} />
         </ModalHeader>

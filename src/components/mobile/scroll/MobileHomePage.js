@@ -62,45 +62,82 @@ export default function MobileHomePage({ product }) {
         </div>
       </div>
       <ModalComponent isOpen={isOpen} close={() => setOpen(false)}>
-          <p className="font-semibold" style={{color:"#00ADAD"}}>Air force maziwa</p>
-          <p className="text-gray-800  font-extrabold">Kshs 2,345/=</p>
-          <div className="flex flex-row text-yellow-500 -space-x-1">
-            <StarIcon className="h-5" />
-            <StarIcon className="h-5" />
-            <StarIcon className="h-5" />
-            <StarIcon className="h-5" />
-            <StarIcon className="h-5 text-gray-500" />
-          </div>
-          <div>
-            <hr/>
+        <p className="font-semibold" style={{ color: "#00ADAD" }}>
+          Air force maziwa
+        </p>
+        <p className="text-gray-800  font-extrabold">Kshs 2,345/=</p>
+        <div className="flex flex-row text-yellow-400 -space-x-1">
+          <StarIcon className="h-5" />
+          <StarIcon className="h-5" />
+          <StarIcon className="h-5" />
+          <StarIcon className="h-5" />
+          <StarIcon className="h-5 text-gray-500" />
+        </div>
+        <div>
+          <hr />
           <p className="text-gray-800 my-1">Available colors</p>
           <div className="flex flex-row space-x-2 m-0">
-          <div className="bg-red-400  rounded-full " style={{width:"1rem", height:"1rem"}}></div>
-          <div className="bg-green-400  rounded-full " style={{width:"1rem", height:"1rem"}}></div>
-          <div className="bg-blue-400  rounded-full " style={{width:"1rem", height:"1rem"}}></div>
-          <div className="bg-yellow-400  rounded-full " style={{width:"1rem", height:"1rem"}}></div>
+            <div
+              className="bg-red-400  rounded-full "
+              style={{ width: "1rem", height: "1rem" }}
+            ></div>
+            <div
+              className="bg-green-400  rounded-full "
+              style={{ width: "1rem", height: "1rem" }}
+            ></div>
+            <div
+              className="bg-blue-400  rounded-full "
+              style={{ width: "1rem", height: "1rem" }}
+            ></div>
+            <div
+              className="bg-yellow-400  rounded-full "
+              style={{ width: "1rem", height: "1rem" }}
+            ></div>
           </div>
-          </div>
+        </div>
 
-<div className="mt-2 mb-2">
-<p className="text-gray-800 m-0 font-semibold">Sizes</p>
+        <div className="mt-2 mb-2">
+          <p className="text-gray-800 m-0 font-semibold">Sizes</p>
           <div className="flex flex-row space-x-2 m-0">
-          <div className="  text-gray-600 font-bold text-xs " style={{width:"1rem", height:"1rem"}}>XL</div>
-          <div className="  text-gray-600 font-bold text-xs " style={{width:"1rem", height:"1rem"}}>LG</div>
-          <div className="  text-gray-600 font-bold text-xs " style={{width:"1rem", height:"1rem"}}>SM</div>
-          <div className="  text-gray-600 font-bold text-xs " style={{width:"1rem", height:"1rem"}}>XS</div>
-          </div>
-</div>
-          <div>
-            <div style={{height: 90, overflowY: 'scroll',}}>
-            <p className="text-gray-500 text-sm">{body}</p>
-
+            <div
+              className="  text-gray-600 font-bold text-xs "
+              style={{ width: "1rem", height: "1rem" }}
+            >
+              XL
+            </div>
+            <div
+              className="  text-gray-600 font-bold text-xs "
+              style={{ width: "1rem", height: "1rem" }}
+            >
+              LG
+            </div>
+            <div
+              className="  text-gray-600 font-bold text-xs "
+              style={{ width: "1rem", height: "1rem" }}
+            >
+              SM
+            </div>
+            <div
+              className="  text-gray-600 font-bold text-xs "
+              style={{ width: "1rem", height: "1rem" }}
+            >
+              XS
             </div>
           </div>
-          <div className="pl-2 pr-8">
-          <button style={{backgroundColor:"#47817F"}} className="m-2 p-1 rounded-md w-full text-white" >BUY</button>
-
+        </div>
+        <div>
+          <div style={{ height: 90, overflowY: "scroll" }}>
+            <p className="text-gray-500 text-sm">{body}</p>
           </div>
+        </div>
+        <div className="pl-2 pr-8">
+          <button
+            style={{ backgroundColor: "#47817F" }}
+            className="m-2 p-1 rounded-md w-full text-white"
+          >
+            BUY
+          </button>
+        </div>
       </ModalComponent>
     </>
   );
