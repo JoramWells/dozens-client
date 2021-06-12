@@ -35,7 +35,7 @@ export default function MobileHomePage({ product }) {
                 className="rounded-t-sm"
               />
               <div className="p-2">
-                <blockquote>{id}</blockquote>
+                {/* <blockquote style={{hid:"hidden"}} >{id}</blockquote> */}
 
                 <p style={{ color: "#00ADAD" }}>Airforce Maziwa</p>
                 <figcaption>
@@ -51,10 +51,8 @@ export default function MobileHomePage({ product }) {
                   <div className="flex flex-row items-center justify-between content-center mt-2 text-gray-400">
                     <div className="text-sm">12mins</div>
                     <div className="flex flex-row items-center">
-                      <div className="text-sm">
-                      231
-                      </div>
-                    
+                      <div className="text-sm">{id}31</div>
+
                       <ThumbUpIcon className="h-5 " />
                     </div>
                   </div>
@@ -133,12 +131,15 @@ export default function MobileHomePage({ product }) {
             <p className="text-gray-500 text-sm">{body}</p>
           </div>
         </div>
-        <div className="pl-2 pr-8">
+        <div className="pl-2 pr-8 flex flex-row">
           <button
             style={{ backgroundColor: "#47817F" }}
-            className="m-2 p-1 rounded-md w-full text-white"
+            className="m-2 p-1 rounded-md w-full text-white focus:outline-none"
           >
             BUY
+          </button>
+          <button className="m-2 bg-black bg-opacity-20 p-1 w-full rounded-md focus:outline-none">
+            SHOP
           </button>
         </div>
       </ModalComponent>
