@@ -8,13 +8,15 @@ const portal = document.getElementById("portal");
 const Background = styled.div`
   height: 100vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition-duration: 500ms;
+
 `;
 
 const Content = styled.div`
@@ -22,6 +24,8 @@ const Content = styled.div`
   padding: 10px;
   border-radius: 10px;
   margin: 5px;
+  transition-duration: 500ms;
+
 `;
 
 const ModalHeader = styled.div`
@@ -44,7 +48,7 @@ const ModalComponent = ({ isOpen, close, children }) => {
     <Background>
       <Content className="shadow-lg" ref={contentRef}>
         <ModalHeader className="flex flex-row justify-end" >
-          <XIcon className="h-5 text-gray-700" onClick={close} />
+          <XIcon className="h-5 text-gray-700" onClick={()=>close()} />
         </ModalHeader>
         {children}
       </Content>

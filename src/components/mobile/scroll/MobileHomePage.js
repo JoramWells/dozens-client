@@ -14,7 +14,7 @@ export default function MobileHomePage({ product }) {
           <title>HomePage | Dozens Kenya</title>
         </Helmet>
 
-        <div className="p-4 " style={{ backgroundColor: "whitesmoke" }}>
+        <div className="p-4 " style={{ backgroundColor: "whitesmoke",paddingTop:"5rem" }}>
           <div className="flex flex-col content-center items-center space-y-8">
             <figure
               style={{ width: "18rem", border: "1px solid #F0F0F0 " }}
