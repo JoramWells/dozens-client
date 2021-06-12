@@ -70,10 +70,11 @@ export default class MobileLoginComponent extends Component {
               </Link>
             </div>
             <button
+            style={{backgroundColor:"#47817F"}}
               onClick={this.showValues}
-              className="bg-blue-500 block w-full mt-4 p-2 rounded-md focus:outline-none active:bg-blue-400"
+              className="block w-full mt-4 p-2 rounded-md focus:outline-none active:bg-blue-400"
             >
-              <p className="text-white font-semibold text-xl">SignIn</p>
+              <p className="text-white  text-xl">SignIn</p>
             </button>
           </div>
         </div>

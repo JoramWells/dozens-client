@@ -114,8 +114,8 @@ export default class MobileRegisterComponent extends Component {
                 Already have an account?Login
               </Link>
             </div>
-            <button className="bg-blue-500 block w-full mt-4 p-2 rounded-md focus:outline-none active:bg-blue-400">
-              <p className="text-white font-semibold text-xl">SignIn</p>
+            <button style={{backgroundColor:"#47817F"}} className=" block w-full mt-4 p-2 rounded-md focus:outline-none active:bg-blue-400">
+              <p className="text-white text-xl">SignIn</p>
             </button>
           </div>
         </div>

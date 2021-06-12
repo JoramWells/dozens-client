@@ -17,10 +17,11 @@ const InputFormComponent = ({
     onChange(value);
   };
   return (
-    <div data-testid="input_form">
+    <>
       <div
       style={{width:"18rem"}}
-        className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-100 p-1  rounded-md " 
+        className="bg-white w-full my-2 flex flex-row  ring-1 ring-gray-100 p-1  rounded-md " 
+        data-testid="input_form"
       >
         {Icon && <Icon className="h-5 m-1 text-gray-500" />}
 
@@ -35,7 +36,7 @@ const InputFormComponent = ({
       <div className="h-2 flex justify-start">
         {error && <p className="text-xs text-red-400 -mt-1">{error.message}</p>}
       </div>
-    </div>
+    </>
   );
 };
 InputFormComponent.propTypes = {
