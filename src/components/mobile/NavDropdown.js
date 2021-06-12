@@ -5,8 +5,12 @@ import {
   LoginIcon,
   UserIcon,
 } from "@heroicons/react/solid";
+import {withRouter} from 'react-router-dom'
 
-export default function NavDropdown() {
+function NavDropdown(props) {
+  function login(){
+    props.history.push("/login")
+  }
   return (
     <div className="text-right">
       <Menu as="div" className="relative inline-block text-left">
@@ -27,7 +31,7 @@ export default function NavDropdown() {
           <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-2 py-2 ">
               <Menu.Item>
-                <div className="flex flex-row text-gray-500 space-x-4 items-center content-center justify-between">
+                <div className="flex flex-row text-gray-500 space-x-4 items-center content-center justify-between" onClick={login}>
                   Login
                   <LoginIcon className="h-5 " />
                 </div>
@@ -48,3 +52,4 @@ export default function NavDropdown() {
     </div>
   );
 }
+export default withRouter( NavDropdown)
