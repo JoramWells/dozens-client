@@ -7,19 +7,18 @@ const portal = document.getElementById("portal");
 
 const Background = styled.div`
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 8px;
 `;
 
 const Content = styled.div`
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
 `;
 
@@ -41,9 +40,9 @@ const ModalComponent = ({ isOpen, close, children }) => {
   if (!isOpen) return null;
   return ReactDOM.createPortal(
     <Background>
-      <Content className="shadow-xl" ref={contentRef}>
+      <Content className="shadow-lg" ref={contentRef}>
         <ModalHeader className="flex flex-row justify-end" >
-          <XIcon className="h-5" onClick={close} />
+          <XIcon className="h-5 text-gray-700" onClick={close} />
         </ModalHeader>
         {children}
       </Content>
