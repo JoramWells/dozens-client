@@ -22,7 +22,7 @@ export default function MobileHomePage({ product }) {
               style={{ width: "17rem", border: "1px solid #F0F0F0 " }}
               className="rounded-md bg-white"
             >
-              <div className="absolute active:bg-black focus:bg-black text-gray-50 p-1 rounded-full flex justify-end flex-row items-end focus:bg-opacity-20 active:bg-opacity-20 ">
+              <div className="absolute active:bg-black focus:bg-black text-gray-700 p-1 rounded-full flex justify-end flex-row items-end focus:bg-opacity-20 active:bg-opacity-20 ">
                 <DotsVerticalIcon
                   className="h-5"
                   onClick={() => setOpen(true)}
@@ -48,12 +48,14 @@ export default function MobileHomePage({ product }) {
                     Kshs 4,321/=
                     {likes}
                   </div>
-                  <div className="flex flex-row items-center justify-center content-center mt-2">
-                    <div>
-                      <p className="text-sm text-gray-400">231</p>
-                    </div>
-                    <div>
-                      <ThumbUpIcon className="h-5 text-gray-400" />
+                  <div className="flex flex-row items-center justify-between content-center mt-2 text-gray-400">
+                    <div className="text-sm">12mins</div>
+                    <div className="flex flex-row items-center">
+                      <div className="text-sm">
+                      231
+                      </div>
+                    
+                      <ThumbUpIcon className="h-5 " />
                     </div>
                   </div>
                 </figcaption>
