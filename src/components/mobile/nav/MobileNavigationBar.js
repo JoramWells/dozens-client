@@ -48,6 +48,7 @@ function MobileNavigationBar() {
         data-testid="mobile_nav"
       >
         <div className="flex flex-row space-x-2 p-1">
+          <span>wtf</span>
           <Link to="/">
             <HomeIcon className="h-5 text-white" />
           </Link>
