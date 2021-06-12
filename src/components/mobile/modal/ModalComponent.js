@@ -6,7 +6,6 @@ import { XIcon } from "@heroicons/react/outline";
 const portal = document.getElementById("portal");
 
 const Background = styled.div`
-  width: 100vh;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.1);
   position: fixed;
@@ -15,15 +14,17 @@ const Background = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 8px;
 `;
 
 const Content = styled.div`
   background-color: #fff;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
 `;
 
-const ModalHeader = styled.div``;
+const ModalHeader = styled.div`
+`;
 
 const ModalComponent = ({ isOpen, close, children }) => {
   const contentRef = useRef();
@@ -41,7 +42,7 @@ const ModalComponent = ({ isOpen, close, children }) => {
   return ReactDOM.createPortal(
     <Background>
       <Content className="shadow-xl" ref={contentRef}>
-        <ModalHeader>
+        <ModalHeader className="flex flex-row justify-end" >
           <XIcon className="h-5" onClick={close} />
         </ModalHeader>
         {children}

@@ -1,15 +1,15 @@
-import { DotsVerticalIcon, ThumbUpIcon } from "@heroicons/react/solid";
+import { DotsVerticalIcon, ThumbUpIcon,StarIcon } from "@heroicons/react/solid";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import ModalComponent from "../modal/ModalComponent";
 
 export default function MobileHomePage({ product }) {
-  const { id, alt, productName, price, discount, likes } = product;
+  const { id, alt, body, price, discount, likes } = product;
   const [isOpen, setOpen] = useState(false);
 
   return (
     <>
-      <div className="mobile__body" data-testid={`product-${id}`}>
+      <div className="mobile__body" data-testid={`product-${id}`} key={id}>
         <Helmet>
           <title>HomePage | Dozens Kenya</title>
         </Helmet>
@@ -21,8 +21,7 @@ export default function MobileHomePage({ product }) {
               className="rounded-md bg-white"
             >
               <div
-                className="absolute bg-black text-gray-200 p-1 rounded-full m-1 bg-opacity-20"
-                style={{ right: "30px" }}
+                className="absolute bg-black text-gray-200 p-1 rounded-full flex justify-end flex-row items-end bg-opacity-20 "
               >
                 <DotsVerticalIcon
                   className="h-5"
@@ -35,9 +34,23 @@ export default function MobileHomePage({ product }) {
                 alt={alt}
               />
               <div className="p-2">
-                <blockquote>{productName}</blockquote>
+                <blockquote>{id}</blockquote>
                 <ModalComponent isOpen={isOpen} close={() => setOpen(false)}>
-                  <p>{productName}</p>
+                  <div className="ring-1">
+                     <div className="flex flex-row text-yellow-500 -space-x-1">
+                       <StarIcon className="h-5" />
+                       <StarIcon className="h-5" />
+                       <StarIcon className="h-5" />
+                       <StarIcon className="h-5" />
+                       <StarIcon className="h-5 text-gray-500" />
+
+                     </div>
+                    <div>
+                      <p>{body}</p>
+                    </div>
+                    
+                  </div>
+                  
                 </ModalComponent>
                 <p className="text-gray-600">Airforce Maziwa</p>
                 <figcaption>

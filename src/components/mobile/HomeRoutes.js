@@ -28,9 +28,7 @@ export default function HomeRoutes() {
         <MobileNavigationBar />
       </div>
       {data.map((product) => (
-        <div>
           <MobileHomePage key={product.id} product={product} />
-        </div>
       ))}
       <FooterNavigation />
     </>
