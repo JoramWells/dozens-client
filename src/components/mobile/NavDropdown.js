@@ -3,7 +3,6 @@ import { Fragment } from "react";
 import {
   CogIcon,
   LoginIcon,
-  LogoutIcon,
   UserIcon,
 } from "@heroicons/react/solid";
 
