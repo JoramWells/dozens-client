@@ -23,7 +23,7 @@ const Content = styled.div`
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
-  margin: 5px;
+  margin: 15px;
   transition-duration: 500ms;
 
 `;
@@ -36,7 +36,7 @@ const ModalComponent = ({ isOpen, close, children }) => {
   useEffect(() => {
     if (!isOpen) return;
     function listener(e) {
-      if (contentRef.current.contains(e.target)) return;
+      if (contentRef.current.contains(e.target)) return null;
       close();
     }
     window.addEventListener("click", listener);
@@ -48,7 +48,7 @@ const ModalComponent = ({ isOpen, close, children }) => {
     <Background data-testid="modal_div">
       <Content  className="shadow-lg" ref={contentRef}>
         <ModalHeader className="flex flex-row justify-end" >
-          <XIcon className="h-5 text-gray-700" onClick={()=>close()} />
+          <XIcon className="h-5 text-gray-600" onClick={close} />
         </ModalHeader>
         {children}
       </Content>

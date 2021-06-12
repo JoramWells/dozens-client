@@ -19,7 +19,7 @@ export default function MobileHomePage({ product }) {
         <div className="p-4 " style={{ backgroundColor: "whitesmoke" }}>
           <div className="flex flex-col content-center items-center space-y-8">
             <figure
-              style={{ width: "18rem", border: "1px solid #F0F0F0 " }}
+              style={{ width: "17rem", border: "1px solid #F0F0F0 " }}
               className="rounded-md bg-white"
             >
               <div className="absolute active:bg-black focus:bg-black text-gray-50 p-1 rounded-full flex justify-end flex-row items-end focus:bg-opacity-20 active:bg-opacity-20 ">
@@ -30,8 +30,9 @@ export default function MobileHomePage({ product }) {
               </div>
               <img
                 src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
-                style={{ width: "18rem", height: "170px" }}
+                style={{ width: "17rem", height: "160px" }}
                 alt={alt}
+                className="rounded-t-sm"
               />
               <div className="p-2">
                 <blockquote>{id}</blockquote>
