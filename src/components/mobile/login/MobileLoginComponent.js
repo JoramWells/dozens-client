@@ -1,13 +1,14 @@
 import {
-  ArrowNarrowLeftIcon,
   LockClosedIcon,
   MailIcon,
+  XIcon,
 } from "@heroicons/react/solid";
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Validators } from "../../utilities/Validator";
 import InputFormComponent from "../formInput/InputFormComponent";
+import LoginNav from "./LoginNav";
 
 export default class MobileLoginComponent extends Component {
   state = {
@@ -32,14 +33,14 @@ export default class MobileLoginComponent extends Component {
         <Helmet>
           <title>Login | Dozens Kenya</title>
         </Helmet>
-
-        <nav className="flex flex-row items-center justify-center space-x-4 mb-2 top-0 bg-white p-2 shadow-lg">
-          <div>
-            <ArrowNarrowLeftIcon className="h-5" />
+        <LoginNav>
+        <div>
+            <XIcon className="h-5 text-gray-50" />
           </div>
-          <p className=" text-gray-700 text-xl">Create account</p>
-        </nav>
-        <div className="p-3">
+          <p className=" text-gray-100 text-xl">Login</p>
+
+        </LoginNav>
+        <div className="p-3" style={{paddingTop:"5rem"}}>
           <div
             className="flex flex-col p-2 items-center justify-center content-center bg-white rounded-md "
             style={{ border: "solid #E0E0E0 1px" }}
@@ -50,7 +51,7 @@ export default class MobileLoginComponent extends Component {
               Icon={MailIcon}
               value={email}
               validators={[
-                {check:Validators.email, message:"Invalid email"}
+                { check: Validators.email, message: "Invalid email" },
               ]}
               onChange={this.handleChange("email")}
             />
@@ -59,7 +60,7 @@ export default class MobileLoginComponent extends Component {
               placeholder="******************"
               Icon={LockClosedIcon}
               validators={[
-                {check:Validators.required,message:"Pasword is required"}
+                { check: Validators.required, message: "Pasword is required" },
               ]}
               onChange={this.handleChange("password")}
               value={password}
@@ -70,7 +71,7 @@ export default class MobileLoginComponent extends Component {
               </Link>
             </div>
             <button
-            style={{backgroundColor:"#47817F"}}
+              style={{ backgroundColor: "#47817F" }}
               onClick={this.showValues}
               className="block w-full mt-4 p-2 rounded-md focus:outline-none active:bg-blue-400"
             >

@@ -11,14 +11,15 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Validators } from "../../utilities/Validator";
 import InputFormComponent from "../formInput/InputFormComponent";
+import LoginNav from "./LoginNav";
 
 export default class MobileRegisterComponent extends Component {
   state = {
     username: "",
     email: "",
     phone: "",
-    location:"",
-    password:""
+    location: "",
+    password: "",
   };
   handleChange = (key) => (value) => {
     this.setState({ [key]: value });
@@ -27,20 +28,19 @@ export default class MobileRegisterComponent extends Component {
   //   console.log(this.state.email);
   // };
   render() {
-    const { email, username, phone,location,password } = this.state;
+    const { email, username, phone, location, password } = this.state;
     return (
       <div className="bg-gray-50 mobile__register" data-testid="register_div">
         <Helmet>
           <title>Register | Dozens Kenya</title>
         </Helmet>
-
-        <nav className="flex flex-row items-center justify-around mb-2 top-0 bg-white p-2 shadow-lg">
+        <LoginNav>
           <div>
-            <XIcon className="h-5 text-gray-500" />
+            <XIcon className="h-5 text-gray-100" />
           </div>
-          <p className=" text-gray-700 text-xl">Create account</p>
-        </nav>
-        <div className="p-2">
+          <p className="text-xl text-gray-100">Create account</p>
+        </LoginNav>
+        <div className="p-2" style={{paddingTop:"5rem"}}>
           <div
             className="flex flex-col p-2 items-center justify-center content-center bg-white rounded-md "
             style={{ border: "solid #E0E0E0 1px" }}
@@ -95,7 +95,6 @@ export default class MobileRegisterComponent extends Component {
                   message: "Location is required",
                 },
               ]}
-            
               onChange={this.handleChange("location")}
             />
             <InputFormComponent
@@ -114,7 +113,10 @@ export default class MobileRegisterComponent extends Component {
                 Already have an account?Login
               </Link>
             </div>
-            <button style={{backgroundColor:"#47817F"}} className=" block w-full mt-4 p-2 rounded-md focus:outline-none active:bg-blue-400">
+            <button
+              style={{ backgroundColor: "#47817F" }}
+              className=" block w-full mt-4 p-2 rounded-md focus:outline-none active:bg-blue-400"
+            >
               <p className="text-white text-xl">SignIn</p>
             </button>
           </div>
