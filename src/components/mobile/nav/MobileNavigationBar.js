@@ -9,20 +9,6 @@ import { Link } from "react-router-dom";
 import NavDropdown from "../NavDropdown";
 import styled from "styled-components";
 
-const Navbar = styled.nav`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  transition: 350ms;
-  background-color: #303030;
-  padding: 0.7rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 function MobileNavigationBar() {
   const [visible, setVisible] = useState("hidden");
 
@@ -45,7 +31,6 @@ function MobileNavigationBar() {
         </div>
         <div className="flex flex-row space-x-4 items-center">
           <SearchIcon className="h-5 text-white" onClick={showNav} />
-
           <NavDropdown />
         </div>
       </Navbar>
@@ -70,3 +55,17 @@ function MobileNavigationBar() {
 }
 
 export default MobileNavigationBar;
+
+const Navbar = styled.nav`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  transition: 350ms;
+  background-color: #303030;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
