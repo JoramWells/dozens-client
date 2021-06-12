@@ -27,7 +27,7 @@ function MobileNavigationBar() {
       {/* Search nav */}
       <nav
         style={{ visibility: visible, transition: "350ms" }}
-        className="fixed top-0 w-full shadow-md p-2 bg-white z-0"
+        className="fixed top-0 w-full shadow-md p-2 bg-white z-10"
       >
         <div className="flex flex-row justify-center content-center items-center space-x-4">
           <div onClick={() => hideNav()}>
@@ -43,7 +43,7 @@ function MobileNavigationBar() {
 
       {/* Home nav */}
       <nav
-        className="flex flex-row p-3 justify-between items-center shadow-lg fixed w-full z-10 bg-black"
+        className="flex flex-row p-3 justify-between items-center shadow-lg fixed w-full top-0 z-10 bg-black"
         style={{ visibility: diVisible, transition: "350ms" }}
         data-testid="mobile_nav"
       >
