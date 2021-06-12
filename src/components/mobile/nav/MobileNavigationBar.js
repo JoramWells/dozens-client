@@ -25,22 +25,19 @@ const Navbar = styled.nav`
 
 function MobileNavigationBar() {
   const [visible, setVisible] = useState("hidden");
-  const [diVisible, setDiVisible] = useState("visible");
 
   const showNav = useCallback(() => {
     setVisible("visible");
-    setDiVisible("hidden");
-  }, [setVisible, setDiVisible]);
+  }, [setVisible]);
 
   const hideNav = useCallback(() => {
     setVisible("hidden");
-    setDiVisible("visible");
-  }, [setDiVisible, setVisible]);
+  }, [setVisible]);
 
   return (
     <>
       {/* Home page nav */}
-      <Navbar data-testid="mobile_nav" style={{ visibility: diVisible }}>
+      <Navbar data-testid="mobile_nav" style={{ visibility: "visible" }}>
         <div className="p-1">
           <Link to="/">
             <HomeIcon className="h-5 text-white" />
@@ -55,7 +52,7 @@ function MobileNavigationBar() {
 
       {/* Search nav */}
       <Navbar className="test" style={{ visibility: visible }}>
-        <div onClick={() => hideNav()}>
+        <div onClick={hideNav}>
           <ArrowNarrowLeftIcon className="h-5 text-gray-100" />
         </div>
         <div className=" bg-gray-100 flex flex-row items-center content-center rounded-full">
