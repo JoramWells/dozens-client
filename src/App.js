@@ -4,7 +4,6 @@ import HomeRoutes from "./components/mobile/HomeRoutes";
 import MobileRegisterComponent from "./components/mobile/login/MobileRegisterComponent";
 import MobileLoginComponent from "./components/mobile/login/MobileLoginComponent";
 import MobileAddProduct from "./components/mobile/product/MobileAddProduct";
-import Infinite from "./components/mobile/scroll/infiniteScroll/Infinite";
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
           <Route path="/login" exact component={MobileLoginComponent} />
           <Route path="/register" exact component={MobileRegisterComponent} />
           <Route path="/add_product" exact component={MobileAddProduct} />
-          <Route path="/search" exact component={Infinite} />
           
 
 
