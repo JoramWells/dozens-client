@@ -1,4 +1,6 @@
-import { DotsVerticalIcon, ThumbUpIcon,StarIcon } from "@heroicons/react/solid";
+import { DotsVerticalIcon, StarIcon } from "@heroicons/react/solid";
+import { ThumbUpIcon } from "@heroicons/react/outline";
+
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import ModalComponent from "../modal/ModalComponent";
@@ -14,15 +16,13 @@ export default function MobileHomePage({ product }) {
           <title>HomePage | Dozens Kenya</title>
         </Helmet>
 
-        <div className="p-4 " style={{ backgroundColor: "whitesmoke"}}>
+        <div className="p-4 " style={{ backgroundColor: "whitesmoke" }}>
           <div className="flex flex-col content-center items-center space-y-8">
             <figure
               style={{ width: "18rem", border: "1px solid #F0F0F0 " }}
               className="rounded-md bg-white"
             >
-              <div
-                className="absolute bg-black text-gray-200 p-1 rounded-full flex justify-end flex-row items-end bg-opacity-20 "
-              >
+              <div className="absolute active:bg-black focus:bg-black text-gray-50 p-1 rounded-full flex justify-end flex-row items-end focus:bg-opacity-20 active:bg-opacity-20 ">
                 <DotsVerticalIcon
                   className="h-5"
                   onClick={() => setOpen(true)}
@@ -35,39 +35,25 @@ export default function MobileHomePage({ product }) {
               />
               <div className="p-2">
                 <blockquote>{id}</blockquote>
-                <ModalComponent isOpen={isOpen} close={() => setOpen(false)}>
-                  <div className="ring-1">
-                     <div className="flex flex-row text-yellow-500 -space-x-1">
-                       <StarIcon className="h-5" />
-                       <StarIcon className="h-5" />
-                       <StarIcon className="h-5" />
-                       <StarIcon className="h-5" />
-                       <StarIcon className="h-5 text-gray-500" />
 
-                     </div>
-                    <div>
-                      <p>{body}</p>
-                    </div>
-                    
-                  </div>
-                  
-                </ModalComponent>
-                <p className="text-gray-600">Airforce Maziwa</p>
+                <p style={{ color: "#00ADAD" }}>Airforce Maziwa</p>
                 <figcaption>
                   <div>
                     <p className="font-semibold text-gray-600">{price}</p>
-                    <p className="text-lg font-semibold text-gray-700">
-                      Kshs 2,213/=
-                    </p>
+                    <p className=" font-bold text-gray-600">Kshs 2,213/=</p>
                   </div>
-                  <div className="line-through text-sm text-gray-300 font-bold">
+                  <div className="line-through text-sm text-gray-300">
                     {discount}
                     Kshs 4,321/=
-                  </div>
-                  <div className="flex flex-row space-x-2 items-center content-center mt-4">
                     {likes}
-                    <p className="text-sm text-gray-400">231</p>
-                    <ThumbUpIcon className="h-5 text-gray-500" />
+                  </div>
+                  <div className="flex flex-row items-center justify-center content-center mt-2">
+                    <div>
+                      <p className="text-sm text-gray-400">231</p>
+                    </div>
+                    <div>
+                      <ThumbUpIcon className="h-5 text-gray-400" />
+                    </div>
                   </div>
                 </figcaption>
               </div>
@@ -75,6 +61,47 @@ export default function MobileHomePage({ product }) {
           </div>
         </div>
       </div>
+      <ModalComponent isOpen={isOpen} close={() => setOpen(false)}>
+          <p className="font-semibold" style={{color:"#00ADAD"}}>Air force maziwa</p>
+          <p className="text-gray-800  font-extrabold">Kshs 2,345/=</p>
+          <div className="flex flex-row text-yellow-500 -space-x-1">
+            <StarIcon className="h-5" />
+            <StarIcon className="h-5" />
+            <StarIcon className="h-5" />
+            <StarIcon className="h-5" />
+            <StarIcon className="h-5 text-gray-500" />
+          </div>
+          <div>
+            <hr/>
+          <p className="text-gray-800 my-1">Available colors</p>
+          <div className="flex flex-row space-x-2 m-0">
+          <div className="bg-red-400  rounded-full " style={{width:"1rem", height:"1rem"}}></div>
+          <div className="bg-green-400  rounded-full " style={{width:"1rem", height:"1rem"}}></div>
+          <div className="bg-blue-400  rounded-full " style={{width:"1rem", height:"1rem"}}></div>
+          <div className="bg-yellow-400  rounded-full " style={{width:"1rem", height:"1rem"}}></div>
+          </div>
+          </div>
+
+<div className="mt-2 mb-2">
+<p className="text-gray-800 m-0 font-semibold">Sizes</p>
+          <div className="flex flex-row space-x-2 m-0">
+          <div className="  text-gray-600 font-bold text-xs " style={{width:"1rem", height:"1rem"}}>XL</div>
+          <div className="  text-gray-600 font-bold text-xs " style={{width:"1rem", height:"1rem"}}>LG</div>
+          <div className="  text-gray-600 font-bold text-xs " style={{width:"1rem", height:"1rem"}}>SM</div>
+          <div className="  text-gray-600 font-bold text-xs " style={{width:"1rem", height:"1rem"}}>XS</div>
+          </div>
+</div>
+          <div>
+            <div style={{height: 90, overflowY: 'scroll',}}>
+            <p className="text-gray-500 text-sm">{body}</p>
+
+            </div>
+          </div>
+          <div className="pl-2 pr-8">
+          <button style={{backgroundColor:"#47817F"}} className="m-2 p-1 rounded-md w-full text-white" >BUY</button>
+
+          </div>
+      </ModalComponent>
     </>
   );
 }
