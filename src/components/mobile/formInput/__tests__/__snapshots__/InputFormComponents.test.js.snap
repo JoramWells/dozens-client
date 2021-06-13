@@ -1,11 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`inputformcomponent matches snapshot 1`] = `
-<div
-  data-testid="input_form"
->
+Array [
   <div
-    className="bg-white w-full my-4 flex flex-row  ring-1 ring-gray-100 p-1  rounded-md "
+    className="bg-white w-full my-2 flex flex-row items-center  ring-1 ring-gray-100 p-1  rounded-md "
+    data-testid="input_form"
     style={
       Object {
         "width": "18rem",
@@ -26,15 +25,15 @@ exports[`inputformcomponent matches snapshot 1`] = `
       />
     </svg>
     <input
-      className="w-full focus:outline-none text-gray-700 rounded-md p-1"
+      className="w-full focus:outline-none text-gray-500 rounded-md p-1"
       onChange={[Function]}
       placeholder="john doe"
       type="text"
       value="Joram Bramuel"
     />
-  </div>
+  </div>,
   <div
     className="h-2 flex justify-start"
-  />
-</div>
+  />,
+]
 `;

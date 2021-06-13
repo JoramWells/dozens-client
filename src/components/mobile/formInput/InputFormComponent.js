@@ -20,7 +20,7 @@ const InputFormComponent = ({
     <>
       <div
       style={{width:"18rem"}}
-        className="bg-white w-full my-2 flex flex-row  ring-1 ring-gray-100 p-1  rounded-md " 
+        className="bg-white w-full my-2 flex flex-row items-center  ring-1 ring-gray-100 p-1  rounded-md " 
         data-testid="input_form"
       >
         {Icon && <Icon className="h-5 m-1 text-gray-500" />}
@@ -29,7 +29,7 @@ const InputFormComponent = ({
           type={type}
           placeholder={placeholder}
           value={value}
-          className="w-full focus:outline-none text-gray-700 rounded-md p-1"
+          className="w-full focus:outline-none text-gray-500 rounded-md p-1"
           onChange={handleChange}
         />
       </div>

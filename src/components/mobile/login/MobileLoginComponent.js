@@ -1,5 +1,6 @@
 import {
   LockClosedIcon,
+  LockOpenIcon,
   MailIcon,
   XIcon,
 } from "@heroicons/react/solid";
@@ -40,11 +41,15 @@ export default class MobileLoginComponent extends Component {
           <p className=" text-gray-100 text-xl">Login</p>
 
         </LoginNav>
-        <div className="p-3" style={{paddingTop:"5rem"}}>
+        <div className="p-3 " style={{paddingTop:"8rem"}}>
           <div
-            className="flex flex-col p-2 items-center justify-center content-center bg-white rounded-md "
+            className="flex flex-col p-2  bg-white rounded-md "
             style={{ border: "solid #E0E0E0 1px" }}
           >
+            <div className="bg-gray-800 bg-opacity-20 rounded-full" style={{width:"1.8rem", margin:"auto", display:"block"}}>
+            <LockOpenIcon className="h-5 m-1" style={{color:"#47817F"}}/>
+
+            </div>
             <InputFormComponent
               type="email"
               placeholder="jorammanoah1@gmail.com"
